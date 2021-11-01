@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Whisker: View, InsettableShape {
+public struct Whisker: View, InsettableShape {
     private let inset: CGFloat
 
     public func inset(by amount: CGFloat) -> Whisker {
@@ -31,7 +31,7 @@ struct Whisker: View, InsettableShape {
         self.inset = inset
     }
 
-    func path(in rect: CGRect) -> Path {
+    public func path(in rect: CGRect) -> Path {
         let width = rect.size.width - inset * 2
         let height = rect.size.height - inset * 2
         let horizontalCenter = midpoint(of: width)
